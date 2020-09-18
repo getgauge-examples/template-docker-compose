@@ -13,5 +13,5 @@ step("Login as name <name> and <password>", async function (name,password1) {
     await click("Log in");
     await write(name,textBox(below("Username or Email Address")));
     await write(password1,into(textBox("password")));
-    await click("Log in");
+    await click("Log in",below("Password"));
 });
