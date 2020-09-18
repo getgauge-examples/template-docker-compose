@@ -1,0 +1,16 @@
+Created by sswaroop on 5/15/17
+
+This is a concept file with following syntax for each concept.
+# Checkout
+* Checkout now
+* Show a message "Thank you for your purchase! We will ship it shortly!"
+
+# Add <item> and the cart will now contain items <items>
+* See items available for purchase.
+* Add item <item> to the cart.
+* Cart should now contain items <items>
+
+# Place order for <item>. The cart should now contain items <items>
+* See items available for purchase.
+* Add <item> and the cart will now contain items <items>
+* Checkout
