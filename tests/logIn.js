@@ -1,5 +1,5 @@
 "use strict";
-const { write, text,click,below,into,textBox } = require('taiko');
+const { write, text,click,below,into,textBox,link } = require('taiko');
 
 step("Give an option to Log In", async function () {
     await link("Log in").exists();    
