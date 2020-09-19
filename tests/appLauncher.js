@@ -19,5 +19,5 @@ gauge.customScreenshotWriter = async function () {
 };
 
 step("Go to the store website", async function () {
-    await goto("http://demo.activeadmin.info/");
+    await goto("http://localhost:8000/");
   });
