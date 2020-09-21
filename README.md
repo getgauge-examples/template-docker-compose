@@ -11,7 +11,7 @@ This example requires the following softwares to run.
   * [NodeJS](https://nodejs.org/en/)
   * [Gauge](https://docs.gauge.org/getting_started/installing-gauge.html)
   * [NPM](https://www.npmjs.com/)
-  * [Docker](https://www.docker.com/)
+  * [Docker-Compose](https://docs.docker.com/compose/)
 
 ### Setting up the System Under Test (SUT)
 
@@ -20,9 +20,18 @@ This example requires the following softwares to run.
 
 ## Run specs
 
-This runs Gauge specs with [NPM](https://www.npmjs.com/)
-* `npm install`
-* `npm test`
+This example illustrates running Gauge specs in a docker-compose setup. 
+
+The topology: 
+
+- `db`: holds a postgres instance
+- `local-demo.activeadmin.info`: a Ruby on Rails demo application
+- `test`: contains the gauge-taiko tests that verifies against `local-demo.activeadmin.info`
+
+To execute:
+
+- `docker-compose up -d` (`docker-compose up` if you want to see all the logs live)
+- `docker-compose logs --tail="all" --follow test` - See the console output.
 
 ## Topics covered in the example
 
