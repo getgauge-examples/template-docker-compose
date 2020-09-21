@@ -1,0 +1,11 @@
+FROM ruby:2.7
+
+ADD app .
+
+RUN bundle install \
+    # install a javascript runtime for ruby execjs. required for asset pipelines
+    && curl -sL https://deb.nodesource.com/setup_14.x | bash -\
+    && apt-get install -y nodejs\
+    && rm -rf /var/lib/apt/lists/*
+
+ENTRYPOINT [ "/bin/sh", "-c", "bundle exec rails db:setup; bundle exec rails s" ]
