@@ -16,5 +16,5 @@ step("Clear previous login", async function (message) {
 });
 
 step("Give an option to Log Out", async function () {
-    await link("Log out").exists();
+    assert.ok(await link("Log out").exists());
 });

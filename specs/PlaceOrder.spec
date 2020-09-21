@@ -13,7 +13,7 @@ tags: customer
 
    |item                                         |Price |
    |---------------------------------------------|------|
-   |"Beginning Ruby: From Novice to Professional"|$22.61|
+   |Beginning Ruby: From Novice to Professional  |$22.61|
 * Log out
 
 Cart retains items until order is placed
@@ -26,7 +26,7 @@ tags: customer
 
    |item                                         |Price |
    |---------------------------------------------|------|
-   |"Beginning Ruby: From Novice to Professional"|$22.61|
+   |Beginning Ruby: From Novice to Professional  |$22.61|
 * Log out
 
 * Log in with customer name "janet99@bernier.name" and "password"
@@ -34,6 +34,6 @@ tags: customer
 
    |item                                         |Price |
    |---------------------------------------------|------|
-   |"Beginning Ruby: From Novice to Professional"|$22.61|
-   |The Well-Grounded Rubyist                    |$23.75|
+   |Beginning Ruby: From Novice to Professional  |$22.61|
+   |The Well-Grounded Rubyist                    |$27.99|
 * Log out
