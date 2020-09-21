@@ -1,10 +1,10 @@
 /* globals gauge*/
 "use strict";
-const { text,click,button } = require('taiko');
+const { text,click,button,link } = require('taiko');
 const assert = require("assert");
 
 step("Add item <item> to the cart.", async function (item) {
-    await click(item);
+    await click(link(item));
     await click("Add to Card");
 });
 

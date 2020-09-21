@@ -35,5 +35,5 @@ tags: customer
    |item                                         |Price |
    |---------------------------------------------|------|
    |Beginning Ruby: From Novice to Professional  |$22.61|
-   |The Well-Grounded Rubyist                    |$23.75|
+   |The Well-Grounded Rubyist                    |$27.99|
 * Log out
