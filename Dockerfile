@@ -14,7 +14,7 @@ RUN apt-get update \
      && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
      && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' \
      && apt-get update \
-     && apt-get install -y google-chrome-stable wait-for-it
+     && apt-get install -y google-chrome-stable
  
 # Set a custom npm install location so that Gauge, Taiko and dependencies can be 
 # installed without root privileges
@@ -51,4 +51,4 @@ RUN npm install -g @getgauge/cli \
     && gauge config check_updates false
 
 # Default command on running the image
-ENTRYPOINT ["wait-for-it", "local-demo.activeadmin.info:3000", "-s", "--", "npm", "test"]
+ENTRYPOINT ["npm", "test"]

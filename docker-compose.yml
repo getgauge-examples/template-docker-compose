@@ -17,9 +17,15 @@ services:
       DATABASE_URL: postgresql://db/demo_aa_test
       DATABASE_USERNAME: demo_aa
       DATABASE_PASSWORD: demo_aa # Secure it!! This is an example
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
   test:
     build: .
     depends_on:
-      - local-demo.activeadmin.info
+      local-demo.activeadmin.info:
+        condition: service_healthy
     environment:
       app_endpoint: http://local-demo.activeadmin.info:3000
