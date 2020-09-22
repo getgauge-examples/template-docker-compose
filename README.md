@@ -30,8 +30,7 @@ The topology:
 
 To execute:
 
-- `docker-compose up -d` (`docker-compose up` if you want to see all the logs live)
-- `docker-compose logs --tail="all" --follow test` - See the console output.
+- `docker-compose run test` (Note: `test` is the name of the service defined in [`docker-compose.yml`](docker-compose.yml), and can be changed)
 
 ## Topics covered in the example
 
@@ -42,4 +41,4 @@ To execute:
 * Running Gauge specs with [NPM](https://www.npmjs.com/)
 
 # Copyright
-Copyright 2016, ThoughtWorks Inc.
+Copyright 2020, ThoughtWorks Inc.
