@@ -45,10 +45,11 @@ USER gauge
 
 # Install dependencies and plugins
 RUN npm install -g @getgauge/cli \
-    && npm install \
     && gauge install \
     && gauge install screenshot \
     && gauge config check_updates false
+
+RUN npm ci
 
 # Default command on running the image
 ENTRYPOINT ["npm", "test"]
