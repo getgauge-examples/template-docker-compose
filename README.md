@@ -15,6 +15,8 @@ This example requires the following softwares to run.
 
 ### Setting up the System Under Test (SUT)
 
+Docker-compose will bring up the SUT. However if you want to run the tests locally. Here are the instructions to bring up the SUT
+
 * docker run -p 8000:8000 sasilverain/activeadmin-demo
 * The SUT should now be available at [http://localhost:8000/](http://localhost:8000)
 
