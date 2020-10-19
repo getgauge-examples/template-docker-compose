@@ -5,6 +5,9 @@ const path = require("path");
 const headless = process.env.headless_chrome.toLowerCase() === 'true';
 
 beforeSuite(async () => {
+    if(!process.env.app_endpoint) {
+        throw new Error("Please set the environment variable app_endpoint");
+    }
     await openBrowser({ headless: headless })
 });
 

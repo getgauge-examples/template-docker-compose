@@ -8,7 +8,7 @@ Buy a book
 
 tags: customer
 
-* Log in with customer name "janet99@bernier.name" and "password"
+* Sign up a new customer with name "drew" email "drew@example.com" and "password"
 * Place order for "Beginning Ruby: From Novice to Professional". The cart should now contain items 
 
    |item                                         |Price |
@@ -21,15 +21,14 @@ Cart retains items until order is placed
 
 tags: customer
 
-* Log in with customer name "janet99@bernier.name" and "password"
+* Sign up a new customer with name "alex" email "alex@example.com" and "password"
 * Add "Beginning Ruby: From Novice to Professional" and the cart will now contain items 
 
    |item                                         |Price |
    |---------------------------------------------|------|
    |Beginning Ruby: From Novice to Professional  |$22.61|
 * Log out
-
-* Log in with customer name "janet99@bernier.name" and "password"
+* Log in with customer name "alex@example.com" and "password"
 * Add "The Well-Grounded Rubyist" and the cart will now contain items 
 
    |item                                         |Price |

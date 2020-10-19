@@ -6,12 +6,13 @@ services:
     environment:
       POSTGRES_USER: demo_aa
       POSTGRES_PASSWORD: demo_aa # Secure it!! This is an example
-  local-demo.activeadmin.info:
+  application:
+    depends_on:
+      - db
     build:
       context: .
       dockerfile: Dockerfile.web
-    depends_on:
-      - db
+    restart: always
     environment:
       RAILS_ENV: test
       DATABASE_URL: postgresql://db/demo_aa_test
@@ -25,7 +26,7 @@ services:
   test:
     build: .
     depends_on:
-      local-demo.activeadmin.info:
+      application:
         condition: service_healthy
     environment:
-      app_endpoint: http://local-demo.activeadmin.info:3000
+      app_endpoint: http://application:3000
