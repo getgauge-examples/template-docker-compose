@@ -11,4 +11,3 @@
 # Log in with customer name <name> and <password>
 * Login as name <name> and <password>
 * Show the log in status for user <name>
-* See items available for purchase.

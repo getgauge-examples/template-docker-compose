@@ -17,10 +17,3 @@ step("Sign up as <customer> with email <email> and <password>", async function (
         console.log(err)
     }
 });
-
-step("See items available for purchase.", async function () {
-    // const products = await page().evaluate(
-    //     () => Array.from(document.body.querySelectorAll('.product'))
-    // );
-    // assert.ok(products.length>0,"Atleast on product should be available for purchase")
-});

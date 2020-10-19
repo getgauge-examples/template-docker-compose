@@ -1,6 +1,7 @@
-# Gauge example in Javascript
+# Gauge Docker Compose example
 
-This is an example project for doing web automation testing with [Gauge](http://getgauge.io). This project tests some of the functionalities of the [active admin demo](https://github.com/getgauge/activeadmin-demo) app. This app is hosted as a Java WAR (with embedded Jetty).
+This is a sample testing project using [Gauge](http://gauge.org) JavaScript and [Taiko](https://taiko.dev).
+This project tests some of the functionalities of the [active admin demo](https://github.com/activeadmin/activeadmin) application. 
 
 ## Running this example
 The tests are run on Chrome by default.
@@ -8,19 +9,18 @@ The tests are run on Chrome by default.
 ### Prerequisites
 
 This example requires the following softwares to run.
-  * [NodeJS](https://nodejs.org/en/)
+  * [Docker](https://nodejs.org/en/)
   * [Gauge](https://docs.gauge.org/getting_started/installing-gauge.html)
-  * [NPM](https://www.npmjs.com/)
+  * [Node.JS](https://nodejs.org/en/)
   * [Docker-Compose](https://docs.docker.com/compose/)
 
 ### Setting up the System Under Test (SUT)
 
-To run the tests locally, here are the instructions to bring up the SUT
+Clone this repository and initialize the active admin app sub repository
 
-* `docker run -p 8000:8000 sasilverain/activeadmin-demo`
-* The SUT should now be available at [http://localhost:8000/](http://localhost:8000)
-
-> Note: Docker-compose yml defined in this example brings up the SUT
+```
+git submodule update --init
+```
 
 ## Run specs
 
@@ -29,12 +29,16 @@ This example illustrates running Gauge specs in a docker-compose setup.
 The topology: 
 
 - `db`: holds a postgres instance
-- `local-demo.activeadmin.info`: a Ruby on Rails demo application
-- `test`: contains the gauge-taiko tests that verifies against `local-demo.activeadmin.info`
+- `application`: a Ruby on Rails demo application
+- `test`: contains the gauge-taiko tests that verifies against `application`
 
 To execute:
 
-- `docker-compose run test` (Note: `test` is the name of the service defined in [`docker-compose.yml`](docker-compose.yml), and can be changed)
+```
+docker-compose run test || docker-compose down
+``` 
+
+Note: `test` is the name of the service defined in [`docker-compose.yml`](docker-compose.yml), and can be changed
 
 ## Topics covered in the example
 
@@ -43,6 +47,3 @@ To execute:
 * [Table driven execution](https://docs.gauge.org/latest/execution.html#data-driven-execution)
 * [External datasource (special param)](https://docs.gauge.org/latest/execution.html#external-csv-for-data-table)
 * Running Gauge specs with [NPM](https://www.npmjs.com/)
-
-# Copyright
-Copyright 2020, ThoughtWorks Inc.
